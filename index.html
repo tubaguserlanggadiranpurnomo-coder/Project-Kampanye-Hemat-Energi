@@ -1,0 +1,331 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>EnergiKita — Kampanye Hemat Energi Sekolah</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:wght@600;700;800&family=Karla:wght@400;500;600;700&display=swap" rel="stylesheet" />
+  
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <header class="navbar">
+    <div class="container">
+      <button class="logo" data-tujuan="beranda">Energi<span class="logo-titik">Kita</span></button>
+
+      <button class="nav-toggle" aria-label="Buka menu navigasi">
+        <span></span><span></span><span></span>
+      </button>
+
+      <ul class="nav-menu">
+        <li><button data-tujuan="beranda">Beranda</button></li>
+        <li><button data-tujuan="tentang">Tentang</button></li>
+        <!-- Class 'segera' dihapus, diganti dengan data-tujuan -->
+        <li><button data-tujuan="data-fakta">Data &amp; Fakta</button></li>
+        <li><button data-tujuan="aksi-rekomendasi">Aksi &amp; Rekomendasi</button></li>
+      </ul>
+    </div>
+  </header>
+
+  <!-- ======================= HALAMAN: BERANDA ======================= -->
+  <div id="halaman-beranda" class="halaman">
+    <section class="hero">
+      <div class="container">
+        <div class="hero-teks">
+          <p class="hero-eyebrow">Kampanye Hemat Energi Sekolah</p>
+          <h1>Matikan yang Tak Perlu,<br />Selamatkan Energi Kita.</h1>
+          <p class="hero-tagline">
+            EnergiKita adalah ajakan buat seluruh warga sekolah — siswa, guru,
+            dan staf — untuk lebih peduli dan bijak memakai listrik, mulai
+            dari kebiasaan paling sederhana.
+          </p>
+          <div class="hero-tombol">
+            <button class="btn btn-utama" data-tujuan="tentang">Kenapa Ini Penting?</button>
+            <button class="btn btn-garis" data-tujuan="data-fakta">Lihat Faktanya</button>
+          </div>
+        </div>
+
+        <div class="hero-ilustrasi">
+          <svg viewBox="0 0 240 240" width="280" height="280" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Ilustrasi matahari dan bola lampu hemat energi">
+            <circle cx="120" cy="100" r="55" fill="#ffc145" />
+            <g stroke="#ffc145" stroke-width="6" stroke-linecap="round">
+              <line x1="120" y1="10" x2="120" y2="30" />
+              <line x1="120" y1="170" x2="120" y2="190" />
+              <line x1="30" y1="100" x2="10" y2="100" />
+              <line x1="45" y1="35" x2="30" y2="20" />
+              <line x1="195" y1="35" x2="210" y2="20" />
+            </g>
+            <path d="M100 150 h40 v20 a20 20 0 0 1 -40 0 z" fill="#d8f3dc" />
+            <rect x="112" y="190" width="16" height="10" rx="2" fill="#1b4332" />
+          </svg>
+        </div>
+      </div>
+    </section>
+
+    <section id="latar-belakang">
+      <div class="container">
+        <div class="section-judul">
+          <h2>Kenapa Kampanye Ini Ada?</h2>
+          <p>Pemborosan energi sering terjadi tanpa disadari — dan dampaknya lebih besar dari yang kita kira.</p>
+        </div>
+
+        <div class="dua-kolom">
+          <div class="kartu-fakta">
+            <h3>Kebiasaan Kecil, Dampak Besar</h3>
+            <p>
+              Lampu yang menyala di ruang kosong, AC yang terus hidup saat
+              ruangan sudah sepi, charger yang tetap tertancap — hal-hal
+              kecil seperti ini terlihat sepele, tapi kalau terjadi setiap
+              hari di seluruh sekolah, jumlah energi yang terbuang jadi
+              <strong>tidak sedikit</strong>.
+            </p>
+          </div>
+          <div class="kartu-fakta">
+            <h3>Bukan Cuma Soal Listrik</h3>
+            <p>
+              Energi listrik yang kita pakai sebagian besar masih berasal
+              dari sumber yang terbatas. Semakin boros kita memakainya,
+              semakin besar juga tekanan terhadap lingkungan. Hemat energi
+              berarti ikut menjaga bumi untuk jangka panjang.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section style="background-color: var(--hijau-muda);">
+      <div class="container">
+        <div class="section-judul">
+          <h2>Apa yang Ingin Kami Capai?</h2>
+          <p>Tiga hal ini yang jadi fokus kampanye EnergiKita di lingkungan sekolah.</p>
+        </div>
+
+        <div class="grid-tujuan">
+          <div class="kartu-tujuan">
+            <svg class="ikon" viewBox="0 0 24 24" fill="none" stroke="#1b4332" stroke-width="1.8"><path d="M9 18h6M10 21h4M12 3a6 6 0 0 0-3.6 10.8c.6.45 1.1 1.2 1.1 1.95V16h5v-.25c0-.75.5-1.5 1.1-1.95A6 6 0 0 0 12 3Z"/></svg>
+            <h3>Menumbuhkan Kesadaran</h3>
+            <p>Membuat warga sekolah lebih peka terhadap kebiasaan boros energi di sekitarnya.</p>
+          </div>
+          <div class="kartu-tujuan">
+            <svg class="ikon" viewBox="0 0 24 24" fill="none" stroke="#1b4332" stroke-width="1.8"><path d="M4 12a8 8 0 1 0 16 0 8 8 0 0 0-16 0Z"/><path d="M12 8v4l3 2"/></svg>
+            <h3>Membangun Kebiasaan Baru</h3>
+            <p>Mendorong langkah hemat energi jadi kebiasaan sehari-hari, bukan cuma imbauan sesaat.</p>
+          </div>
+          <div class="kartu-tujuan">
+            <svg class="ikon" viewBox="0 0 24 24" fill="none" stroke="#1b4332" stroke-width="1.8"><path d="M3 3v18h18"/><path d="M7 15l4-5 3 3 5-7"/></svg>
+            <h3>Berbasis Bukti Nyata</h3>
+            <p>Setiap ajakan didukung data dari angket &amp; observasi sekolah — bukan sekadar imbauan umum.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="teaser">
+      <div class="container">
+        <div class="teaser-kotak">
+          <h2>Sudah Siap Membawa Perubahan?</h2>
+          <p>
+            Cari tahu langkah-langkah praktis apa saja yang bisa kamu lakukan mulai hari ini di sekolah untuk menghemat energi.
+          </p>
+          <button class="btn btn-utama" data-tujuan="aksi-rekomendasi">Lihat Rekomendasi Aksi</button>
+        </div>
+      </div>
+    </section>
+  </div>
+
+  <!-- ======================= HALAMAN: TENTANG ======================= -->
+  <div id="halaman-tentang" class="halaman">
+    <section class="halaman-hero">
+      <div class="container">
+        <h1>Cerita di Balik EnergiKita</h1>
+        <p>Kenapa kampanye ini dibuat, dan apa yang ingin dicapai.</p>
+      </div>
+    </section>
+
+    <section>
+      <div class="container cerita">
+        <h2>Kenapa Kampanye Ini Dibuat?</h2>
+        <p>
+          Selama ini, banyak kebiasaan boros energi di lingkungan sekolah
+          yang terjadi begitu saja tanpa disadari — lampu ruang kelas yang
+          tetap menyala saat jam istirahat, kipas angin yang dibiarkan
+          berputar di ruangan kosong, atau charger yang lupa dicabut.
+        </p>
+        <p>
+          EnergiKita lahir dari keinginan untuk mengubah kebiasaan itu,
+          bukan lewat teguran atau aturan, tapi lewat ajakan yang membuat
+          orang <em>mau</em> berubah karena paham alasannya. Kampanye ini
+          adalah kelanjutan dari kegiatan lintas mata pelajaran (PABP, KIK,
+          PP, MTK, Bahasa Indonesia, dan ESD).
+        </p>
+      </div>
+    </section>
+
+    <section class="identitas">
+      <div class="container">
+        <div class="section-judul">
+          <h2>Identitas Pembuat</h2>
+        </div>
+        <div class="kartu-identitas">
+          <dl>
+            <dt>Nama Kelompok</dt>
+            <dd>Kelompok 2 Produktif<span class="catatan-isi"></span></dd>
+            <dt>Rombel</dt>
+            <dd>PPLG XI-4 <span class="catatan-isi"></span></dd>
+            <dt>Mata Pelajaran</dt>
+            <dd>ESD (Education for Sustainable Development)</dd>
+            <dt>Anggota</dt>
+            <dd>Tubagus Erlangga<br>
+                Hazel Anthony<br>
+                Ahmad Gerry <span class="catatan-isi"></span></dd>
+          </dl>
+        </div>
+      </div>
+    </section>
+  </div>
+
+  <!-- ======================= HALAMAN: DATA & FAKTA ======================= -->
+  <div id="halaman-data-fakta" class="halaman">
+    <section class="halaman-hero">
+      <div class="container">
+        <h1>Data &amp; Fakta di Lapangan</h1>
+        <p>Hasil observasi dan angket warga sekolah terkait penggunaan energi.</p>
+      </div>
+    </section>
+
+    <section>
+      <div class="container">
+        <div class="section-judul">
+          <h2>Realita Kebiasaan Kita</h2>
+          <p>Berdasarkan survei internal yang dilakukan kepada 100+ responden di sekolah, ini yang kami temukan.</p>
+        </div>
+
+        <div class="grafik-container">
+          <!-- Grafik 1 -->
+          <div class="grafik-item">
+            <div class="grafik-teks">
+              <h3>Membiarkan Kipas / AC Menyala Saat Kelas Kosong</h3>
+              <span>78% Pernah Melakukan</span>
+            </div>
+            <div class="bar-bg">
+              <div class="bar-isi" style="width: 78%; background-color: var(--kuning-matahari);"></div>
+            </div>
+          </div>
+          
+          <!-- Grafik 2 -->
+          <div class="grafik-item">
+            <div class="grafik-teks">
+              <h3>Membiarkan Charger Terpasang Tanpa Digunakan</h3>
+              <span>65% Sering Melakukan</span>
+            </div>
+            <div class="bar-bg">
+              <div class="bar-isi" style="width: 65%; background-color: var(--hijau-daun);"></div>
+            </div>
+          </div>
+
+          <!-- Grafik 3 -->
+          <div class="grafik-item">
+            <div class="grafik-teks">
+              <h3>Tidak Mematikan Lampu di Siang Hari yang Terang</h3>
+              <span>52% Mengabaikan</span>
+            </div>
+            <div class="bar-bg">
+              <div class="bar-isi" style="width: 52%; background-color: var(--hijau-tua);"></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section style="background-color: var(--kuning-muda);">
+      <div class="container">
+        <div class="dua-kolom">
+          <div>
+            <h2 style="font-family: var(--font-judul); margin-bottom: 1rem; color: var(--hijau-tua);">Tahukah Kamu?</h2>
+            <p style="color: var(--teks-gelap);">
+              Satu unit AC yang dibiarkan menyala selama 2 jam di ruang kosong setiap harinya membuang energi yang setara dengan menyalakan puluhan lampu LED seharian penuh. 
+              <br><br>
+              Jika dikalikan dengan jumlah kelas yang ada di sekolah, ini adalah pemborosan yang sangat besar dan membebani tagihan listrik sekolah serta lingkungan bumi kita.
+            </p>
+          </div>
+          <div class="kartu-identitas" style="transform: rotate(2deg); background-color: var(--putih); border: 2px dashed var(--hijau-tua);">
+             <h3 style="color: var(--hijau-tua);">Kesimpulan Observasi:</h3>
+             <ul style="margin-left: 1.5rem; margin-top: 1rem; color: var(--teks-gelap); display: flex; flex-direction: column; gap: 0.8rem;">
+               <li>Sebagian besar pemborosan terjadi karena <strong>lupa</strong>, bukan kesengajaan.</li>
+               <li>Perlu ada penanggung jawab alat elektronik di setiap kelas.</li>
+               <li>Dibutuhkan stiker pengingat di dekat saklar lampu dan AC.</li>
+             </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+  </div>
+
+  <!-- ======================= HALAMAN: AKSI & REKOMENDASI ======================= -->
+  <div id="halaman-aksi-rekomendasi" class="halaman">
+    <section class="halaman-hero" style="background-color: var(--kuning-matahari); border-bottom-color: var(--hijau-tua);">
+      <div class="container">
+        <h1 style="color: var(--hijau-tua);">Mulai dari Langkah Kecil</h1>
+        <p style="color: var(--hijau-tua);">Rekomendasi tindakan nyata yang bisa kita lakukan bersama.</p>
+      </div>
+    </section>
+
+    <section>
+      <div class="container">
+        <div class="section-judul">
+          <h2>Panduan Aksi Warga Sekolah</h2>
+          <p>Setiap dari kita memiliki peran. Pilih tindakan yang paling sesuai dengan aktivitasmu sehari-hari.</p>
+        </div>
+
+        <div class="grid-tujuan">
+          <!-- Aksi Siswa -->
+          <div class="kartu-tujuan aksi-kartu">
+            <div class="aksi-label">Untuk Siswa</div>
+            <h3>Di Ruang Kelas</h3>
+            <ul>
+              <li>Matikan lampu dan kipas/AC saat seluruh kelas pergi ke lapangan olahraga atau lab.</li>
+              <li>Cabut charger HP atau laptop dari stopkontak jika baterai sudah penuh atau tidak digunakan.</li>
+              <li>Buka tirai jendela di pagi/siang hari untuk memanfaatkan cahaya matahari alami.</li>
+            </ul>
+          </div>
+
+          <!-- Aksi Guru -->
+          <div class="kartu-tujuan aksi-kartu" style="background-color: var(--putih);">
+            <div class="aksi-label" style="background-color: var(--hijau-daun);">Untuk Guru & Staf</div>
+            <h3>Manajemen Ruangan</h3>
+            <ul>
+              <li>Matikan LCD Proyektor segera setelah jam pelajaran atau presentasi selesai.</li>
+              <li>Atur suhu AC pada standar sejuk (24°C - 25°C), tidak perlu terlalu dingin hingga 16°C.</li>
+              <li>Matikan komputer ruang guru/tata usaha saat jam pulang sekolah.</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="identitas">
+      <div class="container">
+        <div class="teaser-kotak" style="transform: rotate(-1deg); text-align: center; max-width: 800px; margin: 0 auto; background-color: var(--hijau-muda); color: var(--hijau-tua); border-color: var(--hijau-tua);">
+          <h2 style="color: var(--hijau-tua);">Jadilah "Ranger Energi" di Kelasmu!</h2>
+          <p style="color: var(--hijau-tua);">
+            Kami merekomendasikan setiap kelas menunjuk 1-2 orang sebagai penanggung jawab kelistrikan (Ranger Energi) yang bertugas memastikan semua alat elektronik mati sebelum ruang kelas dikunci.
+          </p>
+          <button class="btn btn-utama" style="margin-top: 1rem;" data-tujuan="beranda">Kembali ke Beranda</button>
+        </div>
+      </div>
+    </section>
+  </div>
+
+  <footer class="footer">
+    <div class="container">
+      <p>&copy; 2026 EnergiKita — Kampanye Konservasi &amp; Hemat Energi.</p>
+      <p>Proyek ESD (Education for Sustainable Development) · Fase 2: Data & Aksi</p>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
