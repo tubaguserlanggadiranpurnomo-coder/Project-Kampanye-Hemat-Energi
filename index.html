@@ -191,74 +191,154 @@
   <div id="halaman-data-fakta" class="halaman">
     <section class="halaman-hero">
       <div class="container">
-        <h1>Data &amp; Fakta di Lapangan</h1>
-        <p>Hasil observasi dan angket warga sekolah terkait penggunaan energi.</p>
+        <h1>Data &amp; Fakta Kebiasaan Energi</h1>
+        <p>Bukti nyata hasil kuesioner komprehensif perilaku hemat energi 636 siswa kelas XI lintas jurusan.</p>
       </div>
     </section>
 
     <section>
       <div class="container">
+        <!-- Kotak Informasi Metadata Survei -->
+        <div class="meta-info-box">
+          <div class="meta-info-item">
+            <strong>📋 Sumber Data:</strong> Kuesioner Perilaku Hemat Energi Siswa Kelas XI (Google Form)
+          </div>
+          <div class="meta-info-item">
+            <strong>🎯 Skala Penilaian:</strong> Skala Likert 1–4 (1 = Sangat Jarang, 4 = Selalu/Sangat Sering)
+          </div>
+          <div class="meta-info-item">
+            <strong>🔒 Privasi &amp; Validitas:</strong> Data diagregasi anonim, 636 responden valid (99,4% partisipasi)
+          </div>
+        </div>
+
+        <!-- Ringkasan Statistik Utama (Stat Cards) -->
         <div class="section-judul">
-          <h2>Realita Kebiasaan Kita</h2>
-          <p>Berdasarkan survei internal yang dilakukan kepada 100+ responden di sekolah, ini yang kami temukan.</p>
+          <h2>Ringkasan Hasil Analisis Data</h2>
+          <p>Olah data agregat kuesioner memberikan gambaran jelas mengenai kondisi dan budaya hemat energi di sekolah.</p>
         </div>
 
-        <div class="grafik-container">
-          <!-- Grafik 1 -->
-          <div class="grafik-item">
-            <div class="grafik-teks">
-              <h3>Membiarkan Kipas / AC Menyala Saat Kelas Kosong</h3>
-              <span>78% Pernah Melakukan</span>
-            </div>
-            <div class="bar-bg">
-              <div class="bar-isi" style="width: 78%; background-color: var(--kuning-matahari);"></div>
-            </div>
+        <div class="stat-grid">
+          <div class="stat-card">
+            <span class="stat-angka" id="stat-responden">636</span>
+            <span class="stat-label">Total Responden</span>
+            <p class="stat-deskripsi">Partisipasi 99,4% mencakup perwakilan merata dari seluruh 7 program keahlian kelas XI.</p>
           </div>
-          
-          <!-- Grafik 2 -->
-          <div class="grafik-item">
-            <div class="grafik-teks">
-              <h3>Membiarkan Charger Terpasang Tanpa Digunakan</h3>
-              <span>65% Sering Melakukan</span>
+          <div class="stat-card">
+            <span class="stat-angka" id="stat-skor">3.36 <small style="font-size: 1.1rem; color: var(--teks-muted);">/ 4.00</small></span>
+            <span class="stat-label">Rata-Rata Skor Total</span>
+            <p class="stat-deskripsi">Berada di kategori <strong>Sangat Baik</strong> (rentang 3.26 - 4.00) secara keseluruhan.</p>
+          </div>
+          <div class="stat-card">
+            <span class="stat-angka" id="stat-positif">90.8%</span>
+            <span class="stat-label">Perilaku Positif</span>
+            <p class="stat-deskripsi">Rata-rata frekuensi respons siswa menjawab pada kategori "Sering" atau "Selalu".</p>
+          </div>
+          <div class="stat-card">
+            <span class="stat-angka" id="stat-tertinggi">3.51</span>
+            <span class="stat-label">Skor Tertinggi (P01)</span>
+            <p class="stat-deskripsi">Kesadaran harian hemat energi menjadi tindakan yang paling konsisten diterapkan.</p>
+          </div>
+        </div>
+
+        <!-- Visualisasi Grafik Interaktif dengan Chart.js -->
+        <div class="section-judul">
+          <h2>Visualisasi Data Interaktif (Chart.js)</h2>
+          <p>Data berikut dibaca langsung dari file JSON kuesioner dan divisualisasikan dalam bentuk grafik interaktif.</p>
+        </div>
+
+        <div class="grafik-grid">
+          <!-- Grafik 1: Rata-Rata Skor per Butir Indikator -->
+          <div class="chart-card">
+            <div class="chart-header">
+              <h3>Grafik 1: Rata-Rata Skor per Butir Indikator (Skala 1.00 – 4.00)</h3>
+              <p>Perbandingan tingkat kepedulian siswa pada 10 aspek perilaku hemat energi di sekolah.</p>
             </div>
-            <div class="bar-bg">
-              <div class="bar-isi" style="width: 65%; background-color: var(--hijau-daun);"></div>
+            <div class="chart-wrapper chart-wrapper-tinggi">
+              <canvas id="grafikButir"></canvas>
+            </div>
+            <div class="grafik-penjelas">
+              <p>💡 <strong>Kalimat Penjelas:</strong> Kesadaran mempraktikkan hemat energi (P01: 3.51) dan mencabut steker/charger (P06: 3.45) tergolong sangat tinggi, namun pembatasan gawai/laptop (P04: 3.22) serta keberanian menegur rekan sebaya (P09: 3.22) masih menjadi skor terendah yang membutuhkan intervensi kampanye.</p>
             </div>
           </div>
 
-          <!-- Grafik 3 -->
-          <div class="grafik-item">
-            <div class="grafik-teks">
-              <h3>Tidak Mematikan Lampu di Siang Hari yang Terang</h3>
-              <span>52% Mengabaikan</span>
+          <!-- Dua Kolom: Grafik 2 (Kategori) & Grafik 3 (Jurusan) -->
+          <div class="grafik-grid-dua">
+            <!-- Grafik 2: Donut Chart Kategori -->
+            <div class="chart-card">
+              <div class="chart-header">
+                <h3>Grafik 2: Proporsi Kategori Perilaku Siswa</h3>
+                <p>Distribusi persentase klasifikasi kategori perilaku hemat energi.</p>
+              </div>
+              <div class="chart-wrapper chart-wrapper-lingkaran">
+                <canvas id="grafikKategori"></canvas>
+              </div>
+              <div class="grafik-penjelas">
+                <p>💡 <strong>Kalimat Penjelas:</strong> Sebanyak 96,2% siswa berada pada kategori Sangat Baik (59,4%) dan Baik (36,8%), menunjukkan modal kepedulian lingkungan yang kuat pada angkatan kelas XI.</p>
+              </div>
             </div>
-            <div class="bar-bg">
-              <div class="bar-isi" style="width: 52%; background-color: var(--hijau-tua);"></div>
+
+            <!-- Grafik 3: Bar Chart Jurusan -->
+            <div class="chart-card">
+              <div class="chart-header">
+                <h3>Grafik 3: Rata-Rata Skor per Program Keahlian</h3>
+                <p>Perbandingan skor perilaku hemat energi di 7 jurusan kelas XI.</p>
+              </div>
+              <div class="chart-wrapper">
+                <canvas id="grafikJurusan"></canvas>
+              </div>
+              <div class="grafik-penjelas">
+                <p>💡 <strong>Kalimat Penjelas:</strong> Jurusan PMN memimpin dengan rata-rata tertinggi (3.51), sementara jurusan berbasis komputer seperti PPLG dan MPLB (3.24) memerlukan pembiasaan khusus mematikan peralatan digital saat jeda kerja.</p>
+              </div>
+            </div>
+          </div>
+
+          <!-- Grafik 4: Stacked Bar Chart Distribusi Jawaban per Butir -->
+          <div class="chart-card">
+            <div class="chart-header">
+              <h3>Grafik 4: Distribusi Frekuensi Jawaban per Butir (%)</h3>
+              <p>Sebaran persentase jawaban: Selalu (4), Sering (3), Jarang (2), dan Sangat Jarang (1).</p>
+            </div>
+            <div class="chart-wrapper chart-wrapper-tinggi">
+              <canvas id="grafikDistribusi"></canvas>
+            </div>
+            <div class="grafik-penjelas">
+              <p>💡 <strong>Kalimat Penjelas:</strong> Rata-rata 90,8% jawaban siswa terkonsentrasi pada opsi 'Sering' dan 'Selalu', mengonfirmasi bahwa pemborosan energi yang terjadi umumnya dipicu oleh lupa sesaat, bukan karena kebiasaan sengaja.</p>
             </div>
           </div>
         </div>
+
       </div>
     </section>
 
+    <!-- Temuan Menarik & Kesimpulan Observasi -->
     <section style="background-color: var(--kuning-muda);">
       <div class="container">
-        <div class="dua-kolom">
-          <div>
-            <h2 style="font-family: var(--font-judul); margin-bottom: 1rem; color: var(--hijau-tua);">Tahukah Kamu?</h2>
-            <p style="color: var(--teks-gelap);">
-              Satu unit AC yang dibiarkan menyala selama 2 jam di ruang kosong setiap harinya membuang energi yang setara dengan menyalakan puluhan lampu LED seharian penuh. 
-              <br><br>
-              Jika dikalikan dengan jumlah kelas yang ada di sekolah, ini adalah pemborosan yang sangat besar dan membebani tagihan listrik sekolah serta lingkungan bumi kita.
-            </p>
+        <div class="section-judul">
+          <h2>Temuan Menarik &amp; Kesimpulan Analisis</h2>
+          <p>Fakta-fakta penting dari data yang menjadi dasar kuat rekomendasi aksi kampanye kami.</p>
+        </div>
+
+        <div class="fakta-highlight-grid">
+          <div class="fakta-highlight-card">
+            <h4>🔌 Kebiasaan Charger Sudah Baik</h4>
+            <p>Sebanyak <strong>91,9% siswa</strong> terbiasa mencabut steker/charger setelah digunakan, menunjukkan edukasi stopkontak sudah melekat erat.</p>
           </div>
-          <div class="kartu-identitas" style="transform: rotate(2deg); background-color: var(--putih); border: 2px dashed var(--hijau-tua);">
-             <h3 style="color: var(--hijau-tua);">Kesimpulan Observasi:</h3>
-             <ul style="margin-left: 1.5rem; margin-top: 1rem; color: var(--teks-gelap); display: flex; flex-direction: column; gap: 0.8rem;">
-               <li>Sebagian besar pemborosan terjadi karena <strong>lupa</strong>, bukan kesengajaan.</li>
-               <li>Perlu ada penanggung jawab alat elektronik di setiap kelas.</li>
-               <li>Dibutuhkan stiker pengingat di dekat saklar lampu dan AC.</li>
-             </ul>
+          <div class="fakta-highlight-card">
+            <h4>💻 Laptop Sering Terbiarkan Menyala</h4>
+            <p>Sebanyak <strong>13,7% siswa</strong> masih jarang membatasi pemakaian gawai/laptop saat tidak dibutuhkan, menjadikannya peluang penghematan terbesar di lab sekolah.</p>
           </div>
+          <div class="fakta-highlight-card">
+            <h4>🤝 Perlu Keberanian Saling Mengingatkan</h4>
+            <p>Skor terendah ada pada inisiatif menegur teman (3.22), membuktikan perlunya figur <em>Ranger Energi</em> agar siswa tidak merasa sungkan saling mengingatkan.</p>
+          </div>
+          <div class="fakta-highlight-card">
+            <h4>🏫 Jurusan PPLG Siap Memimpin</h4>
+            <p>Dengan 176 siswa (responden terbanyak), siswa jurusan PPLG memiliki potensi pengaruh terbesar untuk menciptakan standar efisiensi energi di laboratorium komputer.</p>
+          </div>
+        </div>
+
+        <div style="text-align: center; margin-top: 2.5rem;">
+          <button class="btn btn-utama" data-tujuan="aksi-rekomendasi">Lihat Rekomendasi Aksi Nyata Berdasarkan Data</button>
         </div>
       </div>
     </section>
@@ -326,6 +406,10 @@
     </div>
   </footer>
 
+  <!-- CDN Chart.js (Fase 2: Tanpa Instalasi) -->
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+  <!-- Data Fallback Kuesioner (Menjamin grafik tetap muncul jika file dibuka langsung via file://) -->
+  <script src="data-perilaku-energi.js"></script>
   <script src="script.js"></script>
 </body>
 </html>

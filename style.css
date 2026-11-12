@@ -531,6 +531,192 @@ body:not(.js-siap) .halaman:first-of-type {
 }
 
 /* TAMBAHAN UNTUK HALAMAN DATA & FAKTA */
+.meta-info-box {
+  background-color: var(--hijau-muda);
+  border: 2px solid var(--hijau-tua);
+  border-radius: 10px;
+  padding: 1.1rem 1.4rem;
+  margin-bottom: 2.5rem;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1.2rem 2rem;
+  align-items: center;
+  box-shadow: 3px 3px 0 var(--hijau-tua);
+}
+
+.meta-info-item {
+  font-size: 0.92rem;
+  color: var(--hijau-tua);
+  line-height: 1.4;
+}
+
+.meta-info-item strong {
+  font-family: var(--font-judul);
+  font-weight: 700;
+}
+
+.stat-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 1.5rem;
+  margin-bottom: 3.5rem;
+}
+
+.stat-card {
+  background: var(--putih);
+  border: 2px solid var(--hijau-tua);
+  border-radius: 12px;
+  padding: 1.6rem 1.4rem;
+  box-shadow: 4px 4px 0 var(--hijau-tua);
+  display: flex;
+  flex-direction: column;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.stat-card:hover {
+  transform: translate(-2px, -2px);
+  box-shadow: 6px 6px 0 var(--hijau-tua);
+}
+
+.stat-angka {
+  font-family: var(--font-judul);
+  font-size: clamp(2rem, 3.8vw, 2.6rem);
+  font-weight: 800;
+  color: var(--hijau-tua);
+  line-height: 1.1;
+  margin-bottom: 0.35rem;
+}
+
+.stat-label {
+  font-family: var(--font-judul);
+  font-size: 1.05rem;
+  font-weight: 700;
+  color: var(--hijau-daun);
+  margin-bottom: 0.4rem;
+}
+
+.stat-deskripsi {
+  font-size: 0.88rem;
+  color: var(--teks-muted);
+  line-height: 1.45;
+  margin: 0;
+}
+
+.grafik-grid {
+  display: flex;
+  flex-direction: column;
+  gap: 2.5rem;
+  margin-bottom: 3.5rem;
+}
+
+.grafik-grid-dua {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+  gap: 2rem;
+}
+
+.chart-card {
+  background: var(--putih);
+  border: 2px solid var(--hijau-tua);
+  border-radius: 14px;
+  padding: 1.8rem;
+  box-shadow: 5px 5px 0 var(--hijau-tua);
+  display: flex;
+  flex-direction: column;
+} 
+
+.chart-header {
+  margin-bottom: 1.25rem;
+  border-bottom: 2px dashed #e2ded4;
+  padding-bottom: 0.8rem;
+}
+
+.chart-header h3 {
+  font-size: 1.2rem;
+  color: var(--hijau-tua);
+  margin-bottom: 0.25rem;
+}
+
+.chart-header p {
+  font-size: 0.88rem;
+  color: var(--teks-muted);
+  margin: 0;
+}
+
+.chart-wrapper {
+  position: relative;
+  width: 100%;
+  min-height: 320px;
+  flex: 1;
+}
+
+.chart-wrapper-tinggi {
+  min-height: 420px;
+}
+
+.chart-wrapper-lingkaran {
+  min-height: 300px;
+  max-height: 360px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.grafik-penjelas {
+  margin-top: 1.3rem;
+  padding: 0.95rem 1.2rem;
+  background-color: var(--kuning-muda);
+  border-left: 5px solid var(--kuning-matahari);
+  border-radius: 6px;
+  font-size: 0.92rem;
+  line-height: 1.55;
+  color: var(--teks-gelap);
+}
+
+.grafik-penjelas p {
+  margin: 0;
+  max-width: 100%;
+  color: var(--teks-gelap);
+}
+
+.grafik-penjelas strong {
+  color: var(--hijau-tua);
+}
+
+.fakta-highlight-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  gap: 1.5rem;
+  margin-top: 1.5rem;
+}
+
+.fakta-highlight-card {
+  background: var(--putih);
+  border: 2px solid var(--hijau-tua);
+  border-radius: 10px;
+  padding: 1.4rem;
+  box-shadow: 4px 4px 0 var(--hijau-tua);
+  transition: transform 0.2s ease;
+}
+
+.fakta-highlight-card:hover {
+  transform: translateY(-2px);
+}
+
+.fakta-highlight-card h4 {
+  font-family: var(--font-judul);
+  font-size: 1.05rem;
+  color: var(--hijau-tua);
+  margin-bottom: 0.5rem;
+}
+
+.fakta-highlight-card p {
+  font-size: 0.9rem;
+  color: var(--teks-muted);
+  line-height: 1.5;
+  margin: 0;
+}
+
 .grafik-container {
   display: flex;
   flex-direction: column;
