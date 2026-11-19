@@ -419,4 +419,228 @@ document.addEventListener("DOMContentLoaded", function () {
       inisialisasiGrafik(data);
     }
   });
+
+  // =========================================================================
+  // FASE 3: INTERAKSI AJAKAN BERTINDAK (TANTANGAN 7 HARI, TIPS, IKRAR KOMITMEN)
+  // =========================================================================
+
+  // 1. TANTANGAN 7 HARI HEMAT ENERGI
+  function inisialisasiTantangan() {
+    var daftarCheckbox = document.querySelectorAll("#daftarTantangan input[type='checkbox']");
+    var progressIsi = document.getElementById("progressTantanganIsi");
+    var labelPersen = document.getElementById("labelTantanganPersen");
+    var labelCount = document.getElementById("labelTantanganCount");
+    var notifSelesai = document.getElementById("notifTantangan");
+
+    if (!daftarCheckbox.length) return;
+
+    var statusTersimpan = {};
+    try {
+      var dataLS = localStorage.getItem("energikita_tantangan");
+      if (dataLS) statusTersimpan = JSON.parse(dataLS);
+    } catch (e) {
+      console.warn("LocalStorage tidak dapat diakses", e);
+    }
+
+    function perbaruiProgress() {
+      var selesai = 0;
+      var total = daftarCheckbox.length;
+
+      daftarCheckbox.forEach(function (cb) {
+        var hari = cb.getAttribute("data-hari");
+        var itemWrap = cb.closest(".item-tantangan");
+        if (cb.checked) {
+          selesai++;
+          if (itemWrap) itemWrap.classList.add("selesai");
+          statusTersimpan[hari] = true;
+        } else {
+          if (itemWrap) itemWrap.classList.remove("selesai");
+          delete statusTersimpan[hari];
+        }
+      });
+
+      var persen = Math.round((selesai / total) * 100);
+      if (progressIsi) progressIsi.style.width = persen + "%";
+      if (labelPersen) labelPersen.textContent = persen + "% Selesai";
+      if (labelCount) labelCount.textContent = selesai + " dari " + total + " Misi";
+
+      if (notifSelesai) {
+        notifSelesai.style.display = selesai === total ? "block" : "none";
+      }
+
+      try {
+        localStorage.setItem("energikita_tantangan", JSON.stringify(statusTersimpan));
+      } catch (e) {}
+    }
+
+    // Pasang status awal dari storage
+    daftarCheckbox.forEach(function (cb) {
+      var hari = cb.getAttribute("data-hari");
+      if (statusTersimpan[hari]) {
+        cb.checked = true;
+      }
+      cb.addEventListener("change", perbaruiProgress);
+    });
+
+    perbaruiProgress();
+  }
+
+  // 2. KAPSUL TIPS HARIAN DINAMIS
+  function inisialisasiTipsHarian() {
+    var btnAcak = document.getElementById("btnAcakTips");
+    var elJudul = document.getElementById("judulTipsHarian");
+    var elDesk = document.getElementById("deskripsiTipsHarian");
+    var elEst = document.getElementById("estimasiTipsHarian");
+
+    var koleksiTips = [
+      {
+        judul: "Atur Suhu AC Optimal di 24°C–25°C",
+        deskripsi: "Setiap kenaikan 1°C pada setelan AC (misal dari 20°C ke 24°C) dapat menghemat konsumsi listrik hingga 7–10% tanpa mengurangi kenyamanan sejuk di dalam kelas.",
+        estimasi: "⚡ Hemat: ~250 Watt per jam per AC"
+      },
+      {
+        judul: "Cabut Steker Charger yang Menganggur",
+        deskripsi: "Charger HP atau laptop yang tetap tertancap di stopkontak tanpa gawai tetap menyedot listrik siluman (vampire power) sebesar 0,25–0,5 Watt per jam secara nonstop.",
+        estimasi: "⚡ Hemat: Mencegah 4-6 kWh kebocoran listrik/bulan"
+      },
+      {
+        judul: "Optimalkan Kecerahan Layar Laptop",
+        deskripsi: "Menurunkan tingkat kecerahan layar laptop dari 100% ke 70% dapat memperpanjang masa pakai baterai hingga 30 menit dan mengurangi frekuensi pengisian daya listrik.",
+        estimasi: "⚡ Hemat: ~15–20 Watt per jam pemakaian"
+      },
+      {
+        judul: "Tutup Gorden saat Matahari Mulai Terik",
+        deskripsi: "Setelah jam 11.30 WIB ketika matahari semakin terik, menutup tirai jendela membantu menjaga suhu ruang tetap stabil dan meringankan beban kerja kompresor pendingin ruangan.",
+        estimasi: "⚡ Hemat: Beban kompresor turun hingga 15%"
+      },
+      {
+        judul: "Aktifkan Fitur Sleep Mode 5 Menit",
+        deskripsi: "Mode sleep otomatis pada PC lab komputer memangkas konsumsi daya dari 80-120 Watt menjadi kurang dari 5 Watt saat siswa meninggalkan meja untuk istirahat.",
+        estimasi: "⚡ Hemat: ~90% daya saat jeda kelas"
+      },
+      {
+        judul: "Matikan Saklar Proyektor LCD",
+        deskripsi: "Lampu proyektor LCD mengonsumsi daya rata-rata 250–350 Watt. Mematikannya segera setelah presentasi selesai sangat signifikan bagi efisiensi energi kelas.",
+        estimasi: "⚡ Hemat: ~300 Watt per jam proyektor mati"
+      }
+    ];
+
+    var indeksTerakhir = 0;
+
+    function tampilkanTips(idx) {
+      var t = koleksiTips[idx];
+      if (elJudul) elJudul.textContent = t.judul;
+      if (elDesk) elDesk.textContent = t.deskripsi;
+      if (elEst) elEst.textContent = t.estimasi;
+    }
+
+    if (btnAcak) {
+      btnAcak.addEventListener("click", function () {
+        var idxBaru;
+        do {
+          idxBaru = Math.floor(Math.random() * koleksiTips.length);
+        } while (idxBaru === indeksTerakhir && koleksiTips.length > 1);
+        indeksTerakhir = idxBaru;
+        tampilkanTips(idxBaru);
+      });
+    }
+  }
+
+  // 3. IKRAR KOMITMEN SISWA
+  function inisialisasiFormIkrar() {
+    var form = document.getElementById("formIkrar");
+    var elJumlah = document.getElementById("jumlahIkrar");
+    var elDaftar = document.getElementById("daftarIkrarTerbaru");
+
+    var ikrarDefault = [
+      { nama: "Tubagus Erlangga", rombel: "PPLG", aksi: "Cabut Steker, Matikan Listrik" },
+      { nama: "Hazel Anthony", rombel: "PPLG", aksi: "Protokol Layar Istirahat" },
+      { nama: "Ahmad Gerry", rombel: "PPLG", aksi: "Ranger Energi Rombel" },
+      { nama: "Siti Rahma", rombel: "PMN", aksi: "Matikan AC Saat Kosong" },
+      { nama: "Budi Santoso", rombel: "TJKT", aksi: "Audit Meja Praktik" }
+    ];
+
+    var daftarIkrar = [];
+    try {
+      var dataTersimpan = localStorage.getItem("energikita_ikrar_list");
+      if (dataTersimpan) {
+        daftarIkrar = JSON.parse(dataTersimpan);
+      } else {
+        daftarIkrar = ikrarDefault;
+        localStorage.setItem("energikita_ikrar_list", JSON.stringify(daftarIkrar));
+      }
+    } catch (e) {
+      daftarIkrar = ikrarDefault;
+    }
+
+    function renderIkrar() {
+      if (elJumlah) {
+        elJumlah.textContent = 25 + daftarIkrar.length;
+      }
+
+      if (elDaftar) {
+        elDaftar.innerHTML = "";
+        daftarIkrar.slice(0, 8).forEach(function (item) {
+          var row = document.createElement("div");
+          row.className = "item-ikrar";
+          row.innerHTML =
+            '<div><span class="item-ikrar-nama">' +
+            escapeHtml(item.nama) +
+            " (" +
+            escapeHtml(item.rombel) +
+            ")</span></div>" +
+            '<div class="item-ikrar-aksi">✓ ' +
+            escapeHtml(item.aksi) +
+            "</div>";
+          elDaftar.appendChild(row);
+        });
+      }
+    }
+
+    function escapeHtml(text) {
+      var div = document.createElement("div");
+      div.textContent = text;
+      return div.innerHTML;
+    }
+
+    if (form) {
+      form.addEventListener("submit", function (e) {
+        e.preventDefault();
+        var inpNama = document.getElementById("namaIkrar");
+        var inpRombel = document.getElementById("rombelIkrar");
+        var checkedAksi = document.querySelectorAll("input[name='aksiPilihan']:checked");
+
+        if (!inpNama || !inpRombel || !inpNama.value.trim() || !inpRombel.value) return;
+
+        var daftarAksiPilihan = [];
+        checkedAksi.forEach(function (c) {
+          daftarAksiPilihan.push(c.value);
+        });
+
+        var teksAksi = daftarAksiPilihan.length ? daftarAksiPilihan[0] : "Duta Hemat Energi";
+
+        var ikrarBaru = {
+          nama: inpNama.value.trim(),
+          rombel: inpRombel.value,
+          aksi: teksAksi
+        };
+
+        daftarIkrar.unshift(ikrarBaru);
+        try {
+          localStorage.setItem("energikita_ikrar_list", JSON.stringify(daftarIkrar));
+        } catch (err) {}
+
+        renderIkrar();
+        form.reset();
+        alert("Terima kasih, " + ikrarBaru.nama + "! Komitmenmu telah tercatat sebagai Duta EnergiKita.");
+      });
+    }
+
+    renderIkrar();
+  }
+
+  // Jalankan inisialisasi fitur Fase 3
+  inisialisasiTantangan();
+  inisialisasiTipsHarian();
+  inisialisasiFormIkrar();
 });
