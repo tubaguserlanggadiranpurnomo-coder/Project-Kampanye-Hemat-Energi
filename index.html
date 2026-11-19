@@ -344,56 +344,346 @@
     </section>
   </div>
 
-  <!-- ======================= HALAMAN: AKSI & REKOMENDASI ======================= -->
+  <!-- ======================= HALAMAN: AKSI & REKOMENDASI (FASE 3) ======================= -->
   <div id="halaman-aksi-rekomendasi" class="halaman">
     <section class="halaman-hero" style="background-color: var(--kuning-matahari); border-bottom-color: var(--hijau-tua);">
       <div class="container">
-        <h1 style="color: var(--hijau-tua);">Mulai dari Langkah Kecil</h1>
-        <p style="color: var(--hijau-tua);">Rekomendasi tindakan nyata yang bisa kita lakukan bersama.</p>
+        <p class="hero-eyebrow" style="color: var(--hijau-tua); font-weight: 700;">Fase 3 · Rekomendasi Konkret &amp; Ajakan Bertindak</p>
+        <h1 style="color: var(--hijau-tua);">Solusi Nyata Berbasis Data</h1>
+        <p style="color: var(--hijau-tua); max-width: 65ch;">
+          Bukan sekadar ajakan klise. Setiap rekomendasi di bawah ini dirancang langsung berdasarkan temuan spesifik dari kuesioner 636 siswa dan observasi riil di lingkungan sekolah kita.
+        </p>
       </div>
     </section>
 
+    <!-- Section Rekomendasi Berbasis Data -->
     <section>
       <div class="container">
-        <div class="section-judul">
-          <h2>Panduan Aksi Warga Sekolah</h2>
-          <p>Setiap dari kita memiliki peran. Pilih tindakan yang paling sesuai dengan aktivitasmu sehari-hari.</p>
+        <!-- Kotak Jembatan Logis dari Fase 2 ke Fase 3 -->
+        <div class="jembatan-data">
+          <h3>📊 Mengapa Rekomendasi Ini Dibuat?</h3>
+          <p>
+            Dari analisis kuesioner di Fase 2, sebanyak <strong>96,2% siswa kelas XI</strong> sesungguhnya sudah memiliki niat dan kategori perilaku yang Baik hingga Sangat Baik. Pemborosan yang masih terjadi bersumber dari <strong>faktor lupa</strong>, <strong>rasa sungkan menegur rekan sebaya (skor 3.22)</strong>, dan <strong>kebiasaan pemakaian laptop/gawai tanpa batas (skor 3.22)</strong>. Rekomendasi berikut diformulasikan khusus untuk menyelesaikan akar masalah tersebut dengan langkah terukur.
+          </p>
         </div>
 
-        <div class="grid-tujuan">
-          <!-- Aksi Siswa -->
-          <div class="kartu-tujuan aksi-kartu">
-            <div class="aksi-label">Untuk Siswa</div>
-            <h3>Di Ruang Kelas</h3>
-            <ul>
-              <li>Matikan lampu dan kipas/AC saat seluruh kelas pergi ke lapangan olahraga atau lab.</li>
-              <li>Cabut charger HP atau laptop dari stopkontak jika baterai sudah penuh atau tidak digunakan.</li>
-              <li>Buka tirai jendela di pagi/siang hari untuk memanfaatkan cahaya matahari alami.</li>
-            </ul>
+        <div class="section-judul">
+          <h2>5 Rekomendasi Konkret untuk Sekolah</h2>
+          <p>Rekomendasi spesifik berbasis temuan butir kuesioner dan observasi langsung di lapangan sekolah.</p>
+        </div>
+
+        <div class="rekomendasi-grid">
+          <!-- Rekomendasi 1: Butir P04 -->
+          <div class="kartu-rekomendasi">
+            <div class="rekomendasi-top">
+              <div class="rekomendasi-judul-wrap">
+                <span class="rekomendasi-nomor">01</span>
+                <h3>Protokol "Layar Istirahat" &amp; Efisiensi Gawai Digital</h3>
+              </div>
+              <span class="badge-pijakan">🎯 Pijakan Data: Butir P04 (Skor 3.22 · Terendah)</span>
+            </div>
+            <div class="rekomendasi-konten">
+              <div class="kotak-masalah">
+                <h4>🔍 Temuan Masalah di Data:</h4>
+                <p>
+                  Sebanyak <strong>13,7% siswa</strong> masih jarang atau belum membatasi pemakaian laptop untuk hal non-esensial. Di kelas dan lab, layar laptop/PC sering dibiarkan menyala terang berjam-jam saat jam istirahat atau saat guru sedang menerangkan teori.
+                </p>
+              </div>
+              <div class="kotak-solusi">
+                <h4>✅ Tindakan Konkret:</h4>
+                <ul>
+                  <li><strong>Aturan 5-Menit Sleep Mode:</strong> Wajibkan pengaturan otomatis layar redup/sleep setelah 5 menit tidak ada aktivitas keyboard/mouse.</li>
+                  <li><strong>Tutup Layar Saat Teori:</strong> Menerapkan kebiasaan <em>half-close laptop</em> saat guru menyampaikan instruksi atau demonstrasi di depan kelas.</li>
+                  <li><strong>Matikan Monitor PC Lab:</strong> Cukup tekan tombol power monitor saat jeda istirahat tanpa perlu mematikan program yang sedang di-compile.</li>
+                </ul>
+              </div>
+            </div>
+            <div class="rekomendasi-footer">
+              <span class="rekomendasi-target">👥 Pelaksana: Seluruh Siswa &amp; Guru Mata Pelajaran Produktif</span>
+              <span class="rekomendasi-dampak">⚡ Estimasi Penghematan: ~40–60 Watt per gawai/jam</span>
+            </div>
           </div>
 
-          <!-- Aksi Guru -->
-          <div class="kartu-tujuan aksi-kartu" style="background-color: var(--putih);">
-            <div class="aksi-label" style="background-color: var(--hijau-daun);">Untuk Guru & Staf</div>
-            <h3>Manajemen Ruangan</h3>
-            <ul>
-              <li>Matikan LCD Proyektor segera setelah jam pelajaran atau presentasi selesai.</li>
-              <li>Atur suhu AC pada standar sejuk (24°C - 25°C), tidak perlu terlalu dingin hingga 16°C.</li>
-              <li>Matikan komputer ruang guru/tata usaha saat jam pulang sekolah.</li>
-            </ul>
+          <!-- Rekomendasi 2: Butir P09 & P03 -->
+          <div class="kartu-rekomendasi">
+            <div class="rekomendasi-top">
+              <div class="rekomendasi-judul-wrap">
+                <span class="rekomendasi-nomor">02</span>
+                <h3>Sistem Piket Bergilir "Ranger Energi" di Tiap Rombel</h3>
+              </div>
+              <span class="badge-pijakan">🎯 Pijakan Data: Butir P09 (Skor 3.22) &amp; P03 (3.37)</span>
+            </div>
+            <div class="rekomendasi-konten">
+              <div class="kotak-masalah">
+                <h4>🔍 Temuan Masalah di Data:</h4>
+                <p>
+                  Skor terendah kedua ada pada keberanian menegur rekan sebaya (3.22). Siswa merasa <strong>sungkan atau canggung</strong> mengingatkan temannya untuk mematikan AC/lampu secara personal sehingga ruang kosong sering dibiarkan menyala.
+                </p>
+              </div>
+              <div class="kotak-solusi">
+                <h4>✅ Tindakan Konkret:</h4>
+                <ul>
+                  <li><strong>Mandat Resmi Bergilir:</strong> Setiap rombel menunjuk 2 siswa per minggu sebagai <em>Ranger Energi</em> resmi dengan penanda pin/lencana khusus.</li>
+                  <li><strong>Protokol Pindah Ruangan:</strong> Ranger bertugas memeriksa saklar lampu, remote AC, dan proyektor sebelum kelas pergi ke lapangan olahraga atau lab.</li>
+                  <li><strong>Bebas Rasa Sungkan:</strong> Karena merupakan tugas resmi terstruktur, siswa yang bertugas dapat mengingatkan rekannya tanpa rasa canggung atau tersinggung.</li>
+                </ul>
+              </div>
+            </div>
+            <div class="rekomendasi-footer">
+              <span class="rekomendasi-target">👥 Pelaksana: Pengurus Rombel, Wali Kelas &amp; Siswa Bergilir</span>
+              <span class="rekomendasi-dampak">⚡ Estimasi Penghematan: Mencegah pemborosan 1,5–2 kWh per ruang kosong/hari</span>
+            </div>
+          </div>
+
+          <!-- Rekomendasi 3: Butir P10 & P06 -->
+          <div class="kartu-rekomendasi">
+            <div class="rekomendasi-top">
+              <div class="rekomendasi-judul-wrap">
+                <span class="rekomendasi-nomor">03</span>
+                <h3>Zonasi Saklar Berlabel Warna &amp; Standar "Cek 3 Titik"</h3>
+              </div>
+              <span class="badge-pijakan">🎯 Pijakan Data: Butir P10 (Skor 3.41 · 8.3% Masih Lupa)</span>
+            </div>
+            <div class="rekomendasi-konten">
+              <div class="kotak-masalah">
+                <h4>🔍 Temuan Masalah di Data:</h4>
+                <p>
+                  Sebagian besar pemborosan terjadi murni karena <strong>terburu-buru atau lupa sesaat</strong> sebelum pulang. Banyak saklar di kelas tidak memiliki label sehingga siswa ragu saklar mana yang mengontrol lampu tertentu.
+                </p>
+              </div>
+              <div class="kotak-solusi">
+                <h4>✅ Tindakan Konkret:</h4>
+                <ul>
+                  <li><strong>Stiker Kode Warna di Saklar:</strong> Tempelkan stiker Hijau (lampu dekat jendela), Kuning (AC &amp; kipas yang harus mati saat jam istirahat), dan Merah (proyektor &amp; stopkontak utama).</li>
+                  <li><strong>Ritual "Cek 3 Titik":</strong> Sebelum pintu kelas dikunci saat jam pulang sekolah, periksa 3 titik utama: (1) Saklar Lampu, (2) Saklar AC/Kipas, (3) Steker LCD Proyektor &amp; Terminal.</li>
+                  <li><strong>Stiker Pengingat di Gagang Pintu:</strong> Pasang pengingat visual mini setinggi pandangan mata: <em>"Sudahkah 3 Titik Mati?"</em>.</li>
+                </ul>
+              </div>
+            </div>
+            <div class="rekomendasi-footer">
+              <span class="rekomendasi-target">👥 Pelaksana: Seksi Kebersihan Kelas &amp; Tim Sarpras Sekolah</span>
+              <span class="rekomendasi-dampak">⚡ Estimasi Penghematan: Menghilangkan pemborosan listrik malam hari secara total</span>
+            </div>
+          </div>
+
+          <!-- Rekomendasi 4: Butir P07 & P08 -->
+          <div class="kartu-rekomendasi">
+            <div class="rekomendasi-top">
+              <div class="rekomendasi-judul-wrap">
+                <span class="rekomendasi-nomor">04</span>
+                <h3>Jam Cahaya Alami (Daylight Hours) &amp; Kunci Suhu AC 24°C</h3>
+              </div>
+              <span class="badge-pijakan">🎯 Pijakan Data: Butir P07 (Skor 3.36) &amp; P08 (Skor 3.31)</span>
+            </div>
+            <div class="rekomendasi-konten">
+              <div class="kotak-masalah">
+                <h4>🔍 Temuan Masalah di Data:</h4>
+                <p>
+                  Sebanyak <strong>10,5% siswa</strong> belum terbiasa membuka tirai jendela di pagi hari, dan AC sering disetel serendah mungkin (16°C–18°C) yang membebani kompresor secara berlebihan tanpa meningkatkan kenyamanan termal.
+                </p>
+              </div>
+              <div class="kotak-solusi">
+                <h4>✅ Tindakan Konkret:</h4>
+                <ul>
+                  <li><strong>Jam Cahaya Alami (07.00 – 11.30 WIB):</strong> Buka seluruh gorden jendela kelas dan matikan deretan lampu sisi luar untuk memaksimalkan sinar matahari pagi.</li>
+                  <li><strong>Kunci Batas Suhu AC 24°C–25°C:</strong> Pasang stiker pengunci suhu pada remote AC atau setel batas otomatis agar suhu tidak diturunkan di bawah 24°C.</li>
+                  <li><strong>Pintu &amp; Jendela Tertutup Rapat Saat AC Nyala:</strong> Cegah udara dingin bocor keluar agar kompresor AC dapat beristirahat secara efisien.</li>
+                </ul>
+              </div>
+            </div>
+            <div class="rekomendasi-footer">
+              <span class="rekomendasi-target">👥 Pelaksana: Seluruh Penghuni Kelas &amp; Petugas Sarpras</span>
+              <span class="rekomendasi-dampak">⚡ Estimasi Penghematan: Pemotongan beban konsumsi listrik pendingin ruang hingga 25%</span>
+            </div>
+          </div>
+
+          <!-- Rekomendasi 5: Rata-Rata Jurusan Komputer (PPLG & MPLB) -->
+          <div class="kartu-rekomendasi">
+            <div class="rekomendasi-top">
+              <div class="rekomendasi-judul-wrap">
+                <span class="rekomendasi-nomor">05</span>
+                <h3>Standar "Green Lab" Khusus Jurusan Berbasis Komputer</h3>
+              </div>
+              <span class="badge-pijakan">🎯 Pijakan Data: Skor Jurusan PPLG &amp; MPLB (3.24 · Terendah)</span>
+            </div>
+            <div class="rekomendasi-konten">
+              <div class="kotak-masalah">
+                <h4>🔍 Temuan Masalah di Data:</h4>
+                <p>
+                  Jurusan berbasis komputer seperti PPLG dan MPLB mencatat skor terendah (3.24). Sebagai jurusan dengan populasi terbanyak (176 siswa PPLG), keberadaan ratusan unit PC, laptop, dan steker colokan di laboratorium menyumbang beban listrik terbesar di sekolah.
+                </p>
+              </div>
+              <div class="kotak-solusi">
+                <h4>✅ Tindakan Konkret:</h4>
+                <ul>
+                  <li><strong>Ritual "1-Menit Shutdown Bersama":</strong> Guru/instruktur menyisakan 1 menit sebelum bel jam praktik berakhir untuk mematikan PC dan saklar steker meja secara serentak.</li>
+                  <li><strong>Hentikan Vampire Power Charger:</strong> Cabut adaptor charger laptop dari stopkontak meja setelah baterai terisi penuh (menghindari arus bocor tersembunyi).</li>
+                  <li><strong>Saklar Master Meja Praktik:</strong> Memasang saklar tombol pemutus daya utama di setiap meja lab komputer agar mudah diputus sekaligus.</li>
+                </ul>
+              </div>
+            </div>
+            <div class="rekomendasi-footer">
+              <span class="rekomendasi-target">👥 Pelaksana: Siswa &amp; Guru Jurusan PPLG, MPLB, TJKT, DKV, serta Toolman Lab</span>
+              <span class="rekomendasi-dampak">⚡ Estimasi Penghematan: Menghilangkan arus bocor pada 170+ unit komputer lab</span>
+            </div>
           </div>
         </div>
       </div>
     </section>
 
-    <section class="identitas">
+    <!-- ======================= SECTION: AJAKAN BERTINDAK INTERAKTIF ======================= -->
+    <section class="section-cta">
       <div class="container">
-        <div class="teaser-kotak" style="transform: rotate(-1deg); text-align: center; max-width: 800px; margin: 0 auto; background-color: var(--hijau-muda); color: var(--hijau-tua); border-color: var(--hijau-tua);">
-          <h2 style="color: var(--hijau-tua);">Jadilah "Ranger Energi" di Kelasmu!</h2>
-          <p style="color: var(--hijau-tua);">
-            Kami merekomendasikan setiap kelas menunjuk 1-2 orang sebagai penanggung jawab kelistrikan (Ranger Energi) yang bertugas memastikan semua alat elektronik mati sebelum ruang kelas dikunci.
-          </p>
-          <button class="btn btn-utama" style="margin-top: 1rem;" data-tujuan="beranda">Kembali ke Beranda</button>
+        <div class="section-judul">
+          <h2>Ajakan Bertindak: Mulai Hari Ini!</h2>
+          <p>Ubah kesadaran menjadi aksi nyata dengan tantangan harian dan komitmen bersama warga sekolah.</p>
+        </div>
+
+        <div class="grid-ajakan">
+          <!-- Widget 1: Tantangan 7 Hari Hemat Energi (Interaktif dengan LocalStorage) -->
+          <div class="kartu-ajakan">
+            <div class="kartu-ajakan-header">
+              <h3>🏆 Tantangan 7 Hari Hemat Energi</h3>
+              <p>Centang aksi yang sudah kamu lakukan hari ini. Kemajuanmu tersimpan otomatis!</p>
+            </div>
+
+            <!-- Progress Bar -->
+            <div class="progress-tantangan-bar">
+              <div id="progressTantanganIsi" class="progress-tantangan-isi"></div>
+            </div>
+            <div class="progress-teks">
+              <span id="labelTantanganPersen">0% Selesai</span>
+              <span id="labelTantanganCount">0 dari 7 Misi</span>
+            </div>
+
+            <!-- Daftar Misi 7 Hari -->
+            <div class="list-tantangan" id="daftarTantangan">
+              <label class="item-tantangan">
+                <input type="checkbox" data-hari="1" />
+                <span><strong>Hari 1:</strong> Cabut kabel charger HP/laptop setelah baterai penuh.</span>
+              </label>
+              <label class="item-tantangan">
+                <input type="checkbox" data-hari="2" />
+                <span><strong>Hari 2:</strong> Buka gorden jendela kelas &amp; nikmati sinar matahari alami.</span>
+              </label>
+              <label class="item-tantangan">
+                <input type="checkbox" data-hari="3" />
+                <span><strong>Hari 3:</strong> Pastikan setelan suhu AC kelas berada di 24°C–25°C.</span>
+              </label>
+              <label class="item-tantangan">
+                <input type="checkbox" data-hari="4" />
+                <span><strong>Hari 4:</strong> Aktifkan mode hemat daya &amp; sleep 5 menit di laptopmu.</span>
+              </label>
+              <label class="item-tantangan">
+                <input type="checkbox" data-hari="5" />
+                <span><strong>Hari 5:</strong> Matikan lampu &amp; kipas saat kelas menuju lab atau lapangan.</span>
+              </label>
+              <label class="item-tantangan">
+                <input type="checkbox" data-hari="6" />
+                <span><strong>Hari 6:</strong> Beranikan diri mengingatkan 1 teman untuk mematikan alat yang tidak dipakai.</span>
+              </label>
+              <label class="item-tantangan">
+                <input type="checkbox" data-hari="7" />
+                <span><strong>Hari 7:</strong> Lakukan audit 3 titik di mejamu sebelum bel pulang berbunyi.</span>
+              </label>
+            </div>
+
+            <div id="notifTantangan" class="notif-tantangan-selesai">
+              🎉 Luar biasa! Kamu telah menuntaskan seluruh Tantangan 7 Hari EnergiKita!
+            </div>
+          </div>
+
+          <!-- Widget 2: Kapsul Tips Harian Dinamis -->
+          <div class="kartu-ajakan">
+            <div class="kartu-ajakan-header">
+              <h3>💡 Kapsul Tips Harian Hemat Energi</h3>
+              <p>Tips praktis yang bisa kamu terapkan hari ini di sekolah.</p>
+            </div>
+
+            <div class="kotak-tips-dinamis" id="kotakTipsHarian">
+              <div class="tips-hari-ini" id="judulTipsHarian">Mengoptimalkan Kecerahan Layar</div>
+              <p class="tips-deskripsi" id="deskripsiTipsHarian">
+                Menurunkan tingkat kecerahan layar laptop dari 100% ke 70% dapat memperpanjang masa pakai baterai hingga 30 menit dan mengurangi konsumsi daya listrik charger.
+              </p>
+              <div>
+                <span class="tips-hemat-estimasi" id="estimasiTipsHarian">⚡ Hemat: ~15-20 Watt/Jam</span>
+              </div>
+            </div>
+
+            <button id="btnAcakTips" class="btn btn-garis btn-tips-acak">
+              🔄 Tampilkan Tips Lainnya
+            </button>
+          </div>
+
+          <!-- Widget 3: Form Ikrar Komitmen Siswa -->
+          <div class="kartu-ajakan">
+            <div class="kartu-ajakan-header">
+              <h3>✍️ Ikrar Duta Hemat Energi</h3>
+              <p>Tandatangani komitmenmu untuk menjadi bagian dari solusi perubahan.</p>
+            </div>
+
+            <div class="counter-ikrar">
+              🌱 <span id="jumlahIkrar">28</span> Warga Sekolah Telah Berikrar!
+            </div>
+
+            <form id="formIkrar" class="form-ikrar">
+              <div class="form-group">
+                <label for="namaIkrar">Nama / Inisial Kamu:</label>
+                <input type="text" id="namaIkrar" class="form-input" placeholder="Misal: Erlangga (PPLG XI-4)" required />
+              </div>
+
+              <div class="form-group">
+                <label for="rombelIkrar">Program Keahlian / Rombel:</label>
+                <select id="rombelIkrar" class="form-select" required>
+                  <option value="">-- Pilih Jurusan / Rombel --</option>
+                  <option value="PPLG">PPLG (Pengembangan Perangkat Lunak & Gim)</option>
+                  <option value="TJKT">TJKT (Teknik Jaringan Komputer & Telko)</option>
+                  <option value="DKV">DKV (Desain Komunikasi Visual)</option>
+                  <option value="MPLB">MPLB (Manajemen Perkantoran)</option>
+                  <option value="PMN">PMN (Pemasaran)</option>
+                  <option value="KLN">KLN (Kuliner)</option>
+                  <option value="HTL">HTL (Perhotelan)</option>
+                  <option value="Guru/Staf">Guru / Tenaga Kependidikan</option>
+                </select>
+              </div>
+
+              <div class="form-group">
+                <label>Aksi yang Disanggupi:</label>
+                <div class="pilihan-komitmen">
+                  <label class="label-checkbox">
+                    <input type="checkbox" name="aksiPilihan" value="Cabut Steker & Charger" checked />
+                    Cabut steker & charger selesai pakai
+                  </label>
+                  <label class="label-checkbox">
+                    <input type="checkbox" name="aksiPilihan" value="Matikan Listrik Saat Kelas Kosong" checked />
+                    Matikan listrik saat kelas kosong
+                  </label>
+                  <label class="label-checkbox">
+                    <input type="checkbox" name="aksiPilihan" value="Berani Mengingatkan Teman" />
+                    Berani saling mengingatkan rekan sebaya
+                  </label>
+                </div>
+              </div>
+
+              <button type="submit" class="btn btn-utama" style="width: 100%; padding: 0.8rem;">
+                🤝 Kirimkan Komitmen Saya
+              </button>
+            </form>
+
+            <div class="daftar-ikrar-terbaru" id="daftarIkrarTerbaru">
+              <!-- Render daftar komitmen via JS -->
+            </div>
+          </div>
+        </div>
+
+        <!-- Navigasi Alur Halaman (Beranda -> Data -> Aksi) -->
+        <div class="navigasi-alur-halaman">
+          <button class="btn btn-garis" data-tujuan="data-fakta">
+            ← Kembali ke Halaman Data &amp; Fakta
+          </button>
+          <button class="btn btn-utama" data-tujuan="beranda">
+            🏠 Selesai, Kembali ke Beranda
+          </button>
         </div>
       </div>
     </section>
@@ -402,7 +692,7 @@
   <footer class="footer">
     <div class="container">
       <p>&copy; 2026 EnergiKita — Kampanye Konservasi &amp; Hemat Energi.</p>
-      <p>Proyek ESD (Education for Sustainable Development) · Fase 2: Data & Aksi</p>
+      <p>Proyek ESD (Education for Sustainable Development) · Fase 3: Rekomendasi &amp; Aksi Berbasis Data</p>
     </div>
   </footer>
 
